@@ -4,12 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blockbuster Online</title>
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="img/logo.svg">
     <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar navbar-light p-0">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.svg" class="logo" alt="BlockBuster online"/></a>
+            <div>
+                <button
+                class="navbar-button p-2 m-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#login"
+                aria-controls="login"
+                aria-expanded="false"
+                aria-label="Toggle login"
+                >
+                <span class="navbar-button-icon"><img src="img/login.svg" alt="Log in"/></span>
+                <span class="navbar-button-text d-none d-sm-inline">Log in</span>
+                </button>
+                <button
+                class="navbar-button p-2 m-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#cart"
+                aria-controls="cart"
+                aria-expanded="false"
+                aria-label="Toggle cart"
+                >
+                <span class="navbar-button-icon"><img src="img/cart.svg" alt="View cart"/></span>
+                <span class="navbar-button-text d-none d-sm-inline">My cart</span>
+                </button>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="collapse collapse-menu text-center pb-2 col" id="login">
+                <div id="email">Email</div>
+                <div id="password">Password</div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="collapse collapse-menu text-center pb-2 col" id="cart">
+                <div id="item1">Item 1</div>
+                <div id="item2">Item 2</div>
+            </div>
+        </div>
+        </nav>
+        <div id="search" class="searchbar container-fluid">
+            <button
+                class="filter-button m-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#filters"
+                aria-controls="filters"
+                aria-expanded="false"
+                aria-label="Toggle filters"
+                >
+                <span class="navbar-button-icon"><img src="img/filters.svg" alt="Log in"/></span>
+                <span class="filter-button-text">Filter</span>
+                </button>
+        </div>
+      </header>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="js/moviedb.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>

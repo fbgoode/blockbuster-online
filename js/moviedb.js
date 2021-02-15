@@ -50,7 +50,7 @@ class MovieDB extends APIRequest {
         .catch(err=>err);
     }
 }
-
+/*
 const test = async() => {
     //let searchbytitle = await MovieDB.searchByTitle('Leonardo DiCaprio');
     //console.log(searchbytitle);
@@ -65,5 +65,5 @@ const test = async() => {
     let discoverbyactorname = await MovieDB.discoverByActorName('Leonardo DiCaprio');
     console.log(discoverbyactorname);
 }
-
 test();
+*/
