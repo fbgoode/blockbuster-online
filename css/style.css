@@ -1,34 +1,45 @@
 
 /* Clases */
 
+.CTA {
+    background-color:#f7ce46;
+    color:#FFF;
+    cursor:pointer;
+    padding:.38em;
+}
+
 .logo {
-    width:6em;
+    width:5em;
 }
 
 .navbar-button {
-    background-color: #383e93;
-    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
-    line-height: 1;
-    border: 1px solid transparent;
-    border-radius: .25rem;
+    background-color: #464b9c;
 }
 
 .filter-button {
     background-color: #fff;
+    padding:0.3em;
+}
+
+.button {
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
     line-height: 1;
     border: 1px solid transparent;
     border-radius: .25rem;
-    padding:0.3em;
 }
 
 .filter-button-text {
-    color:#383e93;
+    color:#464b9c;
     font-size:1rem;
     padding-left:0.2em;
     padding-right:0.3em;
     position: relative;
     top: 0.1em;
+    font-weight:500;
+}
+
+.button-text {
+    font-size:1rem;
     font-weight:500;
 }
 
@@ -47,8 +58,129 @@
 }
 
 .searchbar {
-    background-color: #383e93;
+    background-color: #464b9c;
+}
+
+.coverTitleContainer {
+    padding-top:5rem;
+}
+
+.coverTitle  {
+    position:relative;
+    padding:0;
+    width:100%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align:center;
+    font-weight:bolder;
+    color:white;
+    -webkit-text-stroke: 0.4em white;
+    text-shadow: 0 0.4em 0.5em rgba(0,0,0,05);
+}
+
+.ctOver {
+    position:absolute;
+    color:#f7ce46;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+}
+
+.ctOver h3 {
+    color:#f55852;
+}
+
+.movieList h2 {
+    font-weight:bold;
+}
+
+.movieCollection {
+    min-height:20em;
+    overflow-x:scroll;
+    display:flex;
+    flex-direction:row;
+}
+
+.movieCollection::-webkit-scrollbar
+{
+    height: 0;
+}
+
+.movieContainer {
+    width:12.5em;
+    min-height:18em;
+    background-color: rgb(240,240,240);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    border-radius: 1em;
+    margin-right:1em;
+    flex-shrink: 0;
 }
 
 /* IDs */
 
+#searchbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
+    line-height: 1;
+    overflow: hidden;
+    border-radius: .25rem;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#searchInput {
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    padding-left: 1em;
+}
+
+#textInput {
+    width:99%;
+    height:2.05em;
+    margin:0;
+    padding:0;
+    border: none;
+}
+
+#textInput:focus {
+    outline:none;
+}
+
+#cover {
+    height:28rem;
+    background: linear-gradient(rgba(252,252,252,.5), rgba(252,252,252,.5) 50%, rgba(252,252,252,.95) 80%, rgba(252,252,252,1)), url("../img/movie-background.jpg");
+    background-size: 25rem;
+}
+
+#latest {
+    margin-top: -3em;
+}
+
+main {
+    background-color: rgb(252,252,252);
+}
+
+/* Media */
+
+@media (min-width: 992px) {
+    .pageWidth {
+        max-width:60rem;
+    }
+    .logo {
+        width:6em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pageWidth {
+        max-width:70rem;
+    }
+}

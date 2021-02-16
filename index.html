@@ -16,11 +16,11 @@
 <body>
     <header>
         <nav class="navbar navbar-light p-0">
-          <div class="container-fluid">
+          <div class="container-fluid pageWidth">
             <a class="navbar-brand" href="index.html"><img src="img/logo.svg" class="logo" alt="BlockBuster online"/></a>
             <div>
                 <button
-                class="navbar-button p-2 m-2"
+                class="navbar-button button p-2 m-2"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#login"
@@ -32,7 +32,7 @@
                 <span class="navbar-button-text d-none d-sm-inline">Log in</span>
                 </button>
                 <button
-                class="navbar-button p-2 m-2"
+                class="navbar-button button p-2 m-2"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#cart"
@@ -45,34 +45,71 @@
                 </button>
             </div>
           </div>
-          <div class="container-fluid">
+          <div class="container-fluid pageWidth">
             <div class="collapse collapse-menu text-center pb-2 col" id="login">
                 <div id="email">Email</div>
                 <div id="password">Password</div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid pageWidth">
             <div class="collapse collapse-menu text-center pb-2 col" id="cart">
                 <div id="item1">Item 1</div>
                 <div id="item2">Item 2</div>
             </div>
         </div>
         </nav>
-        <div id="search" class="searchbar container-fluid">
-            <button
-                class="filter-button m-2"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#filters"
-                aria-controls="filters"
-                aria-expanded="false"
-                aria-label="Toggle filters"
-                >
-                <span class="navbar-button-icon"><img src="img/filters.svg" alt="Log in"/></span>
-                <span class="filter-button-text">Filter</span>
+        <div class="container-fluid searchbar p-0">
+          <div id="search" class="container-fluid pageWidth py-lg-1">
+            <div class="row w-100 m-auto">
+              <div class="col-auto p-0">
+                <button
+                  class="filter-button button m-2"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#filters"
+                  aria-controls="filters"
+                  aria-expanded="false"
+                  aria-label="Toggle filters"
+                  >
+                  <span class="navbar-button-icon"><img src="img/filters.svg" alt="Filter"/></span>
+                  <span class="filter-button-text">Filter</span>
                 </button>
+              </div>
+              <div id="searchbar" class="col p-0 m-2">
+                <div id="searchInput">
+                    <input id="textInput" type="text" placeholder="Search films by title, ID or cast">
+                </div>
+                <div id="lupa" class="CTA h-100"><img src="img/search.svg" alt="Search"/></div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
+      <main>
+        <div id="cover" class="container-fluid">
+          <div class="row coverTitleContainer">
+            <div class="coverTitle"><h1>Get the cinema experience delivered to your door.</h1><div class="coverTitle ctOver"><h1>Get the cinema experience delivered to your door.</h1></div></div>
+            <div class="coverTitle mt-5"><h3>50% off your first rental</h3><div class="coverTitle ctOver"><h3>50% off your first rental</h3></div></div>
+            <div class="d-flex justify-content-center mt-5">
+              <button class="CTA button p-2"><span class="button-text">See latest releases</span></button>
+            </div>
+          </div>
+        </div>
+        <div id="latest" class="movieList container-fluid p-0">
+          <div class="container-fluid pageWidth px-4 px-lg-2 mb-3"><h2>Latest movies</h2></div>
+          <div id="latestMovies" class="movieCollection">
+            <div class="container-fluid d-flex flex-row pageWidth px-5 px-lg-2">
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+            </div>
+          </div>
+        </div>
+      </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="js/moviedb.js"></script>
     <script
