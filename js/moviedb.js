@@ -7,7 +7,7 @@ class APIRequest {
 
 class MovieDB extends APIRequest {
     static _apiKey = 'cac61624997edd865edf5c5c8caec2a2';
-    static _apiURL = 'http://api.themoviedb.org/3'
+    static _apiURL = 'https://api.themoviedb.org/3'
     static _search = '/search/movie'
     static _searchPeople = '/search/person'
     static _get = '/movie'
