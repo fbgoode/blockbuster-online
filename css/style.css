@@ -3,13 +3,19 @@ html {
 }
 
 main {
-    background-color: rgb(252,252,252);
+    background: linear-gradient(rgba(252,252,252,.96),rgba(252,252,252,.96)), url("../img/movie-background.jpg");
+    background-size: 25rem;
     padding-bottom:4em;
 }
 
 footer {
     background-color: rgb(85, 85, 85);
     color: white;
+}
+
+nav {
+    display:flex;
+    flex-direction:column;
 }
 
 /* Clases */
@@ -52,7 +58,7 @@ footer {
 }
 
 .button-text {
-    font-size:1rem;
+    font-size:1.5rem;
     font-weight:500;
 }
 
@@ -107,7 +113,7 @@ footer {
 
 .movieList h2 {
     font-weight:bold;
-    color:#383e93
+    color:#2a3074
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -145,16 +151,21 @@ footer {
     overflow:hidden;
     border-radius: 1em;
     margin-right:1em;
+    margin-bottom:2em;
     flex-shrink: 0;
     background-size: cover;
     background-position: center;
     box-shadow: 0 0.2em 0.5em rgb(0 0 0 / 30%);
+    padding: 1em;
+    text-align: center;
+    color: white;
 }
 
 .carousel-dark button {
     border-width:0;
     width: auto;
-    background:rgba(252,252,252,0.3);
+    background:rgba(252,252,252,0.4);
+    margin-bottom:3em;
 }
 
 .carousel-dark button:hover {
@@ -168,7 +179,29 @@ footer {
     z-index: 99999;
 }
 
+.resultsSpinner {
+    position:fixed;
+    top: 20em;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
 /* IDs */
+
+#resultsContainer {
+    min-height: calc(100vh - 15rem);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top:3rem;
+    align-content: start;
+    margin:auto;
+}
+
+#footer p {
+    margin-bottom:0.2rem;
+    text-align: center;
+}
 
 #searchbar {
     background-color: #fff;
@@ -202,8 +235,8 @@ footer {
 }
 
 #cover {
-    height:28rem;
-    background: linear-gradient(rgba(252,252,252,.5), rgba(252,252,252,.5) 50%, rgba(252,252,252,.95) 80%, rgba(252,252,252,1)), url("../img/movie-background.jpg");
+    height:30rem;
+    background: linear-gradient(rgba(252,252,252,.6), rgba(252,252,252,.6) 50%, rgba(252,252,252,.93) 80%, rgba(252,252,252,.96)), url("../img/movie-background.jpg");
     background-size: 25rem;
 }
 
@@ -214,7 +247,8 @@ footer {
 
 #copyright {
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
+    padding-top: 1.5em;
 }
 
 #footer {
@@ -222,7 +256,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top:1rem;
+    padding-top:1.5rem;
 }
 
 #footer a {

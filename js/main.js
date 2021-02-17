@@ -38,6 +38,7 @@
     }
 })();
 
+// Paint movies to home
 const paintCollection = (movies,id) => {
     let containers = document.querySelectorAll(`#${id} .movieContainer`);
     let n = (movies.length<containers.length)?movies.length:containers.length;
