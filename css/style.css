@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 /* Clases */
 
@@ -96,11 +99,20 @@
     font-weight:bold;
 }
 
+.carousel-dark {
+    position:relative;
+}
+
 .movieCollection {
     min-height:20em;
     overflow-x:scroll;
     display:flex;
     flex-direction:row;
+}
+
+.movieCollection::after {
+    content: '';
+    padding-left: 2rem;
 }
 
 .movieCollection::-webkit-scrollbar
@@ -119,6 +131,16 @@
     border-radius: 1em;
     margin-right:1em;
     flex-shrink: 0;
+}
+
+.carousel-dark button {
+    border-width:0;
+    width: auto;
+    background:rgba(252,252,252,0.3);
+}
+
+.carousel-dark button:hover {
+    background:rgba(252,252,252,0.7);
 }
 
 /* IDs */

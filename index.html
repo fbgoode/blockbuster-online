@@ -83,6 +83,12 @@
               </div>
             </div>
           </div>
+          <div class="container-fluid pageWidth">
+            <div class="collapse collapse-menu text-center pb-2 col" id="filters">
+                <div id="item1">Filter 1</div>
+                <div id="item2">Filter 2</div>
+            </div>
+        </div>
         </div>
       </header>
       <main>
@@ -91,14 +97,27 @@
             <div class="coverTitle"><h1>Get the cinema experience delivered to your door.</h1><div class="coverTitle ctOver"><h1>Get the cinema experience delivered to your door.</h1></div></div>
             <div class="coverTitle mt-5"><h3>50% off your first rental</h3><div class="coverTitle ctOver"><h3>50% off your first rental</h3></div></div>
             <div class="d-flex justify-content-center mt-5">
-              <button class="CTA button p-2"><span class="button-text">See latest releases</span></button>
+              <a href="#latest"><button class="CTA button p-2"><span class="button-text">See latest releases</span></button></a>
             </div>
           </div>
         </div>
         <div id="latest" class="movieList container-fluid p-0">
           <div class="container-fluid pageWidth px-4 px-lg-2 mb-3"><h2>Latest movies</h2></div>
-          <div id="latestMovies" class="movieCollection">
-            <div class="container-fluid d-flex flex-row pageWidth px-5 px-lg-2">
+          <div id="latestMovies" class="carousel-dark">
+            <div id="latestMoviesCarousel" class="container-fluid movieCollection d-flex flex-row px-5">
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
               <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
               <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
               <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
@@ -107,11 +126,20 @@
               <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
               <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="latestMoviesCarousel"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="latestMoviesCarousel"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
       </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="js/moviedb.js"></script>
+    <script src="js/main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
