@@ -58,53 +58,53 @@
             </div>
         </div>
         </nav>
-        <div class="container-fluid searchbar p-0">
-          <div id="search" class="container-fluid pageWidth py-lg-1">
-            <div class="row w-100 m-auto">
-              <div class="col-auto p-0">
-                <button
-                  class="filter-button button m-2"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#filters"
-                  aria-controls="filters"
-                  aria-expanded="false"
-                  aria-label="Toggle filters"
-                  >
-                  <span class="navbar-button-icon"><img src="img/filters.svg" alt="Filter"/></span>
-                  <span class="filter-button-text">Filter</span>
-                </button>
+      </header>
+      <div class="container-fluid searchbar p-0">
+        <div id="search" class="container-fluid pageWidth py-lg-1">
+          <div class="row w-100 m-auto">
+            <div class="col-auto p-0">
+              <button
+                class="filter-button button m-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#filters"
+                aria-controls="filters"
+                aria-expanded="false"
+                aria-label="Toggle filters"
+                >
+                <span class="navbar-button-icon"><img src="img/filters.svg" alt="Filter"/></span>
+                <span class="filter-button-text">Filter</span>
+              </button>
+            </div>
+            <div id="searchbar" class="col p-0 m-2">
+              <div id="searchInput">
+                  <input id="textInput" type="text" placeholder="Search films by title, ID or cast">
               </div>
-              <div id="searchbar" class="col p-0 m-2">
-                <div id="searchInput">
-                    <input id="textInput" type="text" placeholder="Search films by title, ID or cast">
-                </div>
-                <div id="lupa" class="CTA h-100"><img src="img/search.svg" alt="Search"/></div>
-              </div>
+              <div id="lupa" class="CTA h-100"><img src="img/search.svg" alt="Search"/></div>
             </div>
           </div>
-          <div class="container-fluid pageWidth">
-            <div class="collapse collapse-menu text-center pb-2 col" id="filters">
-                <div id="item1">Filter 1</div>
-                <div id="item2">Filter 2</div>
-            </div>
         </div>
-        </div>
-      </header>
+        <div class="container-fluid pageWidth">
+          <div class="collapse collapse-menu text-center pb-2 col" id="filters">
+              <div id="item1">Filter 1</div>
+              <div id="item2">Filter 2</div>
+          </div>
+      </div>
+      </div>
       <main>
         <div id="cover" class="container-fluid">
           <div class="row coverTitleContainer">
             <div class="coverTitle"><h1>Get the cinema experience delivered to your door.</h1><div class="coverTitle ctOver"><h1>Get the cinema experience delivered to your door.</h1></div></div>
             <div class="coverTitle mt-5"><h3>50% off your first rental</h3><div class="coverTitle ctOver"><h3>50% off your first rental</h3></div></div>
             <div class="d-flex justify-content-center mt-5">
-              <a href="#latest"><button class="CTA button p-2"><span class="button-text">See latest releases</span></button></a>
+              <a href="#popular"><button class="CTA button p-2"><span class="button-text">Discover films</span></button></a>
             </div>
           </div>
         </div>
-        <div id="latest" class="movieList container-fluid p-0">
-          <div class="container-fluid pageWidth px-4 px-lg-2 mb-3"><h2>Latest movies</h2></div>
-          <div id="latestMovies" class="carousel-dark">
-            <div id="latestMoviesCarousel" class="container-fluid movieCollection d-flex flex-row px-5">
+        <div id="popular" class="movieList container-fluid p-0">
+          <div class="container-fluid pageWidth px-4 px-lg-2 mb-3"><h2>Trending</h2></div>
+          <div id="popularMovies" class="carousel-dark">
+            <div id="popularMoviesCarousel" class="container-fluid movieCollection d-flex flex-row px-5">
               <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
               <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
               <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
@@ -126,17 +126,204 @@
               <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
               <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="latestMoviesCarousel"  data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="popularMoviesCarousel"  data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="latestMoviesCarousel"  data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="popularMoviesCarousel"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div id="toprated" class="movieList container-fluid p-0">
+          <div class="container-fluid pageWidth px-4 px-lg-2 mb-3"><h2>Top rated</h2></div>
+          <div id="topratedMovies" class="carousel-dark">
+            <div id="topratedMoviesCarousel" class="container-fluid movieCollection d-flex flex-row px-5">
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="topratedMoviesCarousel"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="topratedMoviesCarousel"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div id="animation" class="movieList container-fluid p-0">
+          <div class="container-fluid pageWidth px-4 px-lg-2 mb-3"><h2>Animation</h2></div>
+          <div id="animationMovies" class="carousel-dark">
+            <div id="animationMoviesCarousel" class="container-fluid movieCollection d-flex flex-row px-5">
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="animationMoviesCarousel"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="animationMoviesCarousel"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div id="thriller" class="movieList container-fluid p-0">
+          <div class="container-fluid pageWidth px-4 px-lg-2 mb-3"><h2>Thriller</h2></div>
+          <div id="thrillerMovies" class="carousel-dark">
+            <div id="thrillerMoviesCarousel" class="container-fluid movieCollection d-flex flex-row px-5">
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="thrillerMoviesCarousel"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="thrillerMoviesCarousel"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div id="scifi" class="movieList container-fluid p-0">
+          <div class="container-fluid pageWidth px-4 px-lg-2 mb-3"><h2>Sci-Fi</h2></div>
+          <div id="scifiMovies" class="carousel-dark">
+            <div id="scifiMoviesCarousel" class="container-fluid movieCollection d-flex flex-row px-5">
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="scifiMoviesCarousel"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="scifiMoviesCarousel"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div id="comedy" class="movieList container-fluid p-0">
+          <div class="container-fluid pageWidth px-4 px-lg-2 mb-3"><h2>Comedy</h2></div>
+          <div id="comedyMovies" class="carousel-dark">
+            <div id="comedyMoviesCarousel" class="container-fluid movieCollection d-flex flex-row px-5">
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+              <div class="movieContainer"><div class="spinner-border text-secondary" role="status"></div></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="comedyMoviesCarousel"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="comedyMoviesCarousel"  data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
         </div>
       </main>
+      <footer>
+        <div id="footer" class="container-fluid">
+          <div class="row pageWidth py-3">
+            <div class="col">
+              <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Corporate</a></p>
+            </div>
+          </div>
+          <div class="row pageWidth">
+            <div id="copyright">Copyright 2001 BlockBuster Internet Technologies Ltd.</div>
+          </div>
+        </div>
+      </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="js/moviedb.js"></script>
     <script src="js/main.js"></script>

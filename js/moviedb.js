@@ -10,11 +10,23 @@ class MovieDB extends APIRequest {
     static _apiURL = 'http://api.themoviedb.org/3'
     static _search = '/search/movie'
     static _searchPeople = '/search/person'
-    static _get = '/movie/'
+    static _get = '/movie'
+    static _popular = '/popular'
+    static _toprated = '/top_rated'
     static _discover = '/discover/movie'
-    static _lang = 'es-ES'
+    static _lang = 'en-US'
     static searchByTitle(title) {
         return axios.get(`${MovieDB._apiURL}${MovieDB._search}?query=${encodeURI(title)}&language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
+        .then(MovieDB.handleResponse)
+        .catch(err=>err);
+    }
+    static getMostPopular() {
+        return axios.get(`${MovieDB._apiURL}${MovieDB._get}${MovieDB._popular}?language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
+        .then(MovieDB.handleResponse)
+        .catch(err=>err);
+    }
+    static getTopRated() {
+        return axios.get(`${MovieDB._apiURL}${MovieDB._get}${MovieDB._toprated}?language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
         .then(MovieDB.handleResponse)
         .catch(err=>err);
     }
@@ -24,12 +36,17 @@ class MovieDB extends APIRequest {
         .catch(err=>err);
     }
     static getById(id) {
-        return axios.get(`${MovieDB._apiURL}${MovieDB._get}${parseInt(id)}?language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
+        return axios.get(`${MovieDB._apiURL}${MovieDB._get}/${parseInt(id)}?language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
         .then(MovieDB.handleResponse)
         .catch(err=>err);
     }
     static discover() {
         return axios.get(`${MovieDB._apiURL}${MovieDB._discover}?language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
+        .then(MovieDB.handleResponse)
+        .catch(err=>err);
+    }
+    static discoverByGenre(id) {
+        return axios.get(`${MovieDB._apiURL}${MovieDB._discover}?with_genres=${parseInt(id)}&language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
         .then(MovieDB.handleResponse)
         .catch(err=>err);
     }

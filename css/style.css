@@ -2,6 +2,16 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    background-color: rgb(252,252,252);
+    padding-bottom:4em;
+}
+
+footer {
+    background-color: rgb(85, 85, 85);
+    color: white;
+}
+
 /* Clases */
 
 .CTA {
@@ -97,6 +107,11 @@ html {
 
 .movieList h2 {
     font-weight:bold;
+    color:#383e93
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    pointer-events: none;
 }
 
 .carousel-dark {
@@ -104,7 +119,7 @@ html {
 }
 
 .movieCollection {
-    min-height:20em;
+    height:23rem;
     overflow-x:scroll;
     display:flex;
     flex-direction:row;
@@ -122,7 +137,7 @@ html {
 
 .movieContainer {
     width:12.5em;
-    min-height:18em;
+    height:19em;
     background-color: rgb(240,240,240);
     display:flex;
     justify-content: center;
@@ -131,6 +146,9 @@ html {
     border-radius: 1em;
     margin-right:1em;
     flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0.2em 0.5em rgb(0 0 0 / 30%);
 }
 
 .carousel-dark button {
@@ -141,6 +159,13 @@ html {
 
 .carousel-dark button:hover {
     background:rgba(252,252,252,0.7);
+}
+
+.searchbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
 }
 
 /* IDs */
@@ -182,12 +207,26 @@ html {
     background-size: 25rem;
 }
 
-#latest {
-    margin-top: -3em;
+#popular {
+    margin-top: -8em;
+    padding-top:4em!important;
 }
 
-main {
-    background-color: rgb(252,252,252);
+#copyright {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+#footer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top:1rem;
+}
+
+#footer a {
+    color:white;
 }
 
 /* Media */
