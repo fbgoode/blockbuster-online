@@ -15,8 +15,10 @@ class MovieDB extends APIRequest {
     static _toprated = '/top_rated'
     static _discover = '/discover/movie'
     static _lang = 'en-US'
-    static searchByTitle(title) {
-        return axios.get(`${MovieDB._apiURL}${MovieDB._search}?query=${encodeURI(title)}&language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
+    static searchByTitle(title,page = null) {
+        if (page) page = '&page='+page;
+        else page = '';
+        return axios.get(`${MovieDB._apiURL}${MovieDB._search}?query=${encodeURI(title)}${page}&language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
         .then(MovieDB.handleResponse)
         .catch(err=>err);
     }
@@ -40,13 +42,17 @@ class MovieDB extends APIRequest {
         .then(MovieDB.handleResponse)
         .catch(err=>err);
     }
-    static discover() {
-        return axios.get(`${MovieDB._apiURL}${MovieDB._discover}?language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
+    static discover(page) {
+        if (page) page = '&page='+page;
+        else page = '';
+        return axios.get(`${MovieDB._apiURL}${MovieDB._discover}?language=${MovieDB._lang}${page}&api_key=${MovieDB._apiKey}`)
         .then(MovieDB.handleResponse)
         .catch(err=>err);
     }
-    static discoverByGenre(id) {
-        return axios.get(`${MovieDB._apiURL}${MovieDB._discover}?with_genres=${parseInt(id)}&language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
+    static discoverByGenre(ids,page = null) {
+        if (page) page = '&page='+page;
+        else page = '';
+        return axios.get(`${MovieDB._apiURL}${MovieDB._discover}?with_genres=${ids}${page}&language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
         .then(MovieDB.handleResponse)
         .catch(err=>err);
     }
@@ -55,14 +61,16 @@ class MovieDB extends APIRequest {
         .then(MovieDB.handleResponse)
         .catch(err=>err);
     }
-    static discoverByActorName(name) {
+    static discoverByActorName(name,page = null) {
+        if (page) page = '&page='+page;
+        else page = '';
         return axios.get(`${MovieDB._apiURL}${MovieDB._searchPeople}?query=${encodeURI(name)}&language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`)
         .then(MovieDB.handleResponse)
         .then((res)=>{
-            if (res.results[0]) return res.results[0].id;
-            else return new Error('No se enontraron actores.')
+            if (res.results.length) return res.results[0].id;
+            else return 0;
         })
-        .then((id)=>axios.get(`${MovieDB._apiURL}${MovieDB._discover}?with_cast=${parseInt(id)}&language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`))
+        .then((id)=>axios.get(`${MovieDB._apiURL}${MovieDB._discover}?with_cast=${parseInt(id)}${page}&language=${MovieDB._lang}&api_key=${MovieDB._apiKey}`))
         .then(MovieDB.handleResponse)
         .catch(err=>err);
     }

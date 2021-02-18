@@ -38,6 +38,12 @@ nav {
 .filter-button {
     background-color: #fff;
     padding:0.3em;
+    color:#464b9c;
+}
+
+.filter-button.selected {
+    background-color: #585ecf;
+    color:#fff;
 }
 
 .button {
@@ -186,13 +192,21 @@ nav {
     transform: translate(-50%, 0);
 }
 
+.tipText {
+    color:white;
+}
+
 /* IDs */
+
+#filters .button {
+    margin:0.4rem;
+}
 
 #resultsContainer {
     min-height: calc(100vh - 15rem);
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top:3rem;
     align-content: start;
     margin:auto;
@@ -261,6 +275,11 @@ nav {
 
 #footer a {
     color:white;
+}
+
+#loadMore {
+    display: flex;
+    justify-content: center;
 }
 
 /* Media */
