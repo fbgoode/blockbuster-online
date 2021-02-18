@@ -19,7 +19,7 @@
 <table>
 <tr>
 <td>
-
+<br>
 
 **Blockbuster Online** is a simple HTML5 + JS site with a custom carousel element for displaying movie collections and a flexible search function with "infinite scroll". The site connects to <a href="https://www.themoviedb.org/">The Movie DataBase (TMDb)</a> through their API in order to power its search and discover functions.
 
@@ -34,7 +34,7 @@ This project was created for educational purposes at <a href="https://geekshubsa
 
 You may access the site directly from its <a href="https://fbgoode.github.io/blockbuster-online">GitHub Pages deployment</a>.
 
-Alternatively, the project may be downloaded from <a href="https://github.com/fbgoode/spacex-royale/archive/main.zip">this link</a>. You're welcome to borrow my code.
+Alternatively, the project may be downloaded from <a href="https://github.com/fbgoode/blockbuster-online/archive/main.zip">this link</a>. You're welcome to borrow my code.
 
 The site consists of a single html file (<b>index.html</b>) and stylesheet (<b>style.css</b>), and 5 javascript files with the site's functions and logic:
 * <b>moviedb.js</b>: Handles the connectivity with TMDb's API.
