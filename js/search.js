@@ -44,7 +44,7 @@ let search = (query = null) => {
             if(res[0].length) paintResults(res[0],loadmore);
             if(res[1].length) paintResults(res[1],loadmore);
             if(!res[0].length && !res[1].length) {
-                if (!loadmore) paintNoResults();
+                if (!loadmore || nresults==0) paintNoResults();
                 else if (document.getElementById("loadMore")) document.getElementById("loadMore").remove();
             }
         })
@@ -60,7 +60,7 @@ const paintLoading = () => {
 
 // Display no results
 const paintNoResults = () => {
-    if (currPage>1) return;
+    if (nresults>0) return;
     let resultsContainer = document.getElementById("resultsContainer");
     resultsContainer.innerHTML = '<h4>No results found</h4>';
 }
