@@ -19,10 +19,12 @@
 <table>
 <tr>
 <td>
-  
+
+
 **Blockbuster Online** is a simple HTML5 + JS site with a custom carousel element for displaying movie collections and a flexible search function with "infinite scroll". The site connects to <a href="https://www.themoviedb.org/">The Movie DataBase (TMDb)</a> through their API in order to power its search and discover functions.
 
 This project was created for educational purposes at <a href="https://geekshubsacademy.com/">GeeksHubs Academy</a>'s Full Stack Developer Bootcamp by Federico Báez in Valencia, Spain on 2021-2-15 to 2021-2-17.
+
 
 </td>
 </tr>
@@ -46,13 +48,14 @@ The site consists of a single html file (<b>index.html</b>) and stylesheet (<b>s
 
 ## Features
 
-* Custom carousels to display movies to discover
 * Smart search function which predicts the user's intention
     * Leave search empty to discover films
     * Search by movie ID (ex. '101')
     * Search by title (ex. 'Titanic')
     * Search by movie cast (ex. 'Brad Pitt')
+* Infinite scroll (automatically load more results)
 * Filter results by genre
+* Custom carousels to display movies to discover
 * Responsive
 
 <br>
