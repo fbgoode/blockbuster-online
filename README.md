@@ -62,7 +62,7 @@ The site consists of a single html file (<b>index.html</b>) and stylesheet (<b>s
 
 ## Screenshots
 <p align="center">
-<img src="img/screenshot-home.png" width=800><br>
+<img src="img/screenshot-home.jpg" width=800><br>
 <sub>Screenshot - Home page carousels (PC, Chrome v88)</sub>
 </p>
 <br>
