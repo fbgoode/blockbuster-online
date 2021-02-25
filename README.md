@@ -9,7 +9,7 @@
   <a href="#about">About</a> •
   <a href="#usage">Usage</a> •
   <a href="#features">Features</a> •
-  <a href="#screenshots">Screenchots</a>
+  <a href="#screenshots">Screenshots</a>
 </p>
 
 ---
